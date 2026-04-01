@@ -30,9 +30,5 @@ Thumbs.db
 .vscode/
 .idea/
 
-# pdf / md output
-pdf/
-md/
-
 # puppeteer chromium cache
 .cache/
