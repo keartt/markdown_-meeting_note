@@ -3,11 +3,11 @@ async function mdToPrettyPdf() {
   const fileNm = process.argv[2];
 
   const fs = require("fs");
-  const { marked } = require("marked");
+  const { marked } = await import("marked");
   const puppeteer = require("puppeteer");
 
   const md = fs.readFileSync(`./md/${fileNm}.md`, "utf-8");
-  const content = marked(md);
+  const content = marked.parse(md);
 
   const html = `
   <!DOCTYPE html>
